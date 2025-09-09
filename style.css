@@ -82,7 +82,7 @@ footer {
   display: flex;
   align-items: center;
   position: relative;
-  width: 250px;
+  width: 220px;
 }
 
 .search-bar input {
@@ -91,7 +91,7 @@ footer {
   outline: none;
   background: transparent;
   color: #fff;
-  width: 135px;
+  width: 120px;
   font-size: 16px;
   padding: 0 0 2px 0;
   margin-right: 6px;
