@@ -64,60 +64,95 @@ footer {
   padding: 0;
 }
 
+/* === NESO-style search, Data Portal, and Person Icon === */
 .header-center {
   flex: 1 1 auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   height: 100%;
 }
+
 .search-bar {
-  width: 400px;
-  background: #fff;
-  border-radius: 21px;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  height: auto;
+  padding: 0;
   display: flex;
   align-items: center;
-  padding: 0 14px;
-  height: 36px;
+  position: relative;
+  width: 250px;
 }
+
 .search-bar input {
   border: none;
+  border-bottom: 2px solid #fff;
   outline: none;
-  font-size: 16px;
-  padding: 7px 0 7px 0;
   background: transparent;
-  width: 100%;
-  color: #333;
+  color: #fff;
+  width: 135px;
+  font-size: 16px;
+  padding: 0 0 2px 0;
+  margin-right: 6px;
+  font-family: inherit;
+  transition: border-bottom 0.2s;
 }
+
+.search-bar input::placeholder {
+  color: #fff;
+  opacity: 1;
+  font-weight: 400;
+}
+
+.search-bar input:focus {
+  border-bottom: 2px solid #91507a;
+}
+
 .search-icon {
-  color: #1976d2;
-  font-size: 17px;
-  margin-left: 10px;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 2px;
+  margin-right: 22px;
+  margin-left: 2px;
+  display: flex;
+  align-items: center;
 }
 
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-right: 32px;
+  gap: 7px;
+  margin-right: 22px;
 }
+
 .data-portal {
   color: #fff;
   text-decoration: none;
-  font-weight: 600;
-  background: var(--secondary);
-  padding: 5px 22px;
-  border-radius: var(--border-radius);
-  transition: background 0.2s;
-  font-size: 15px;
+  font-weight: 700;
+  background: none;
+  padding: 0 12px;
+  border-radius: 0;
+  font-size: 16px;
+  border: none;
+  margin-right: 7px;
+  display: inline-block;
+  box-shadow: none;
+  transition: text-decoration 0.2s;
 }
+
 .data-portal:hover {
-  background: #c38ac4;
+  text-decoration: underline;
+  background: none;
 }
+
 .user-icon {
-  font-size: 22px;
-  color: #7a5f91;
-  margin-left: 8px;
+  font-size: 20px;
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 3px;
+  font-weight: 400;
 }
 
 /* Main navigation */
@@ -397,6 +432,14 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
+  }
+  .header-center {
+    width: 100%;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+  }
+  .search-bar {
+    width: 100%;
   }
 }
 
