@@ -1,5 +1,5 @@
 :root {
-  --primary: #4B184C;
+  --primary: #43043d; /* Header and logo background color, now identical */
   --secondary: #91507a;
   --background: #fff;
   --footer-bg: #3a0d3e;
@@ -8,15 +8,6 @@
   --sidebar-text: #fff;
   --border-radius: 4px;
   --font-family: 'Open Sans', Arial, sans-serif;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-family);
-  background: var(--background);
-  color: #222;
-  min-height: 100vh;
 }
 
 .topbar {
@@ -28,59 +19,80 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.7rem 3vw 0.7rem 3vw;
+  padding: 0; /* No padding so logo is flush with edge */
+  height: 83px;
+  min-height: 60px;
 }
 .logo {
-  flex: 0 0 230px;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  height: 100%;
 }
 .logo img {
   display: block;
-  width: 210px;  /* Display width for header, sharp due to 421px real file */
+  width: 150px; /* adjust as needed for your logo */
   height: auto;
   margin: 0;
   padding: 0;
 }
-.search-bar {
+.header-center {
   flex: 1 1 auto;
-  max-width: 350px;
-  position: relative;
-  margin: 0 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.search-bar {
+  width: 400px;
+  background: #fff;
+  border-radius: 21px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  height: 36px;
 }
 .search-bar input {
-  width: 100%;
-  padding: 7px 32px 7px 10px;
-  border-radius: 20px;
   border: none;
+  outline: none;
   font-size: 16px;
+  padding: 7px 0 7px 0;
+  background: transparent;
+  width: 100%;
+  color: #333;
 }
 .search-icon {
-  position: absolute;
-  right: 10px;
-  top: 7px;
-  color: #aaa;
+  color: #1976d2;
+  font-size: 17px;
+  margin-left: 10px;
 }
+
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
+  margin-right: 32px;
 }
 .data-portal {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
   background: var(--secondary);
-  padding: 5px 16px;
+  padding: 5px 22px;
   border-radius: var(--border-radius);
   transition: background 0.2s;
+  font-size: 15px;
 }
 .data-portal:hover {
   background: #c38ac4;
 }
 .user-icon {
   font-size: 22px;
-  color: #fff;
+  color: #7a5f91;
+  margin-left: 8px;
 }
 .main-nav {
   background: var(--secondary);
