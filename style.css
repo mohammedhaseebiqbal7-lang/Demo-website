@@ -36,7 +36,7 @@ footer {
 
 .topbar-inner {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   padding: 0;
   height: 83px;
@@ -69,8 +69,9 @@ footer {
   flex: 1 1 auto;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-end; /* align bottom like NESO */
   height: 100%;
+  margin-bottom: 3px; /* push to bottom of header */
 }
 
 .search-bar {
@@ -80,9 +81,27 @@ footer {
   height: auto;
   padding: 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   position: relative;
-  width: 220px;
+  min-width: 210px;
+  margin-right: 25px;
+}
+
+.search-label {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 2px;
+  align-self: flex-start;
+  letter-spacing: 0.01em;
+}
+
+.search-input-wrap {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  width: 100%;
 }
 
 .search-bar input {
@@ -91,12 +110,16 @@ footer {
   outline: none;
   background: transparent;
   color: #fff;
-  width: 120px;
+  width: 160px;
   font-size: 16px;
   padding: 0 0 2px 0;
-  margin-right: 6px;
   font-family: inherit;
   transition: border-bottom 0.2s;
+  margin-right: 30px; /* space for icon */
+}
+
+.search-bar input:focus {
+  border-bottom: 2px solid #91507a;
 }
 
 .search-bar input::placeholder {
@@ -105,25 +128,20 @@ footer {
   font-weight: 400;
 }
 
-.search-bar input:focus {
-  border-bottom: 2px solid #91507a;
-}
-
 .search-icon {
-  color: #fff;
-  font-size: 18px;
-  margin-bottom: 2px;
-  margin-right: 22px;
-  margin-left: 2px;
+  position: absolute;
+  right: 0;
+  bottom: 2px;
   display: flex;
   align-items: center;
+  pointer-events: none;
 }
 
 .header-actions {
   display: flex;
-  align-items: center;
-  gap: 7px;
-  margin-right: 22px;
+  align-items: flex-end;
+  gap: 18px;
+  margin-right: 16px;
 }
 
 .data-portal {
@@ -131,28 +149,23 @@ footer {
   text-decoration: none;
   font-weight: 700;
   background: none;
-  padding: 0 12px;
-  border-radius: 0;
-  font-size: 16px;
   border: none;
-  margin-right: 7px;
-  display: inline-block;
-  box-shadow: none;
+  font-size: 16px;
+  padding: 0;
+  margin: 0 6px;
   transition: text-decoration 0.2s;
 }
 
 .data-portal:hover {
   text-decoration: underline;
-  background: none;
 }
 
 .user-icon {
-  font-size: 20px;
-  color: #fff;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 3px;
-  font-weight: 400;
+  display: flex;
+  align-items: center;
+}
+.user-icon svg {
+  display: block;
 }
 
 /* Main navigation */

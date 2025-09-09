@@ -16,16 +16,24 @@
       <img src="logo.png" alt="NESO National Energy System Operator Logo">
     </div>
     <div class="header-center">
-      <div class="search-bar">
-        <input type="text" placeholder="Search">
-        <span class="search-icon">&#128269;</span>
-      </div>
+      <form class="search-bar" role="search" autocomplete="off">
+        <label for="header-search" class="search-label">Search</label>
+        <div class="search-input-wrap">
+          <input id="header-search" type="text" aria-label="Search">
+          <span class="search-icon">
+            <!-- Simple white outline SVG magnifier, matches NESO -->
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.3">
+              <circle cx="9" cy="9" r="7"/>
+              <line x1="15" y1="15" x2="19" y2="19"/>
+            </svg>
+          </span>
+        </div>
+      </form>
     </div>
     <div class="header-actions">
       <a href="#" class="data-portal">Data Portal</a>
       <span class="user-icon">
-        <!-- SVG for outlined person icon to match NESO -->
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.7">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#fff" stroke-width="1.5">
           <circle cx="10" cy="7" r="3.2"/>
           <path d="M3.5 17c0-3.2 6.9-3.2 13 0" />
         </svg>
@@ -33,18 +41,18 @@
     </div>
   </div>
 </header>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="#">What we do</a></li>
-        <li><a href="#">Energy 101</a></li>
-        <li><a href="#">Industry information</a></li>
-        <li><a href="#">News and events</a></li>
-        <li><a href="#">Publications</a></li>
-        <li><a href="#">Energy outages</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">About</a></li>
-      </ul>
-    </nav>
+<nav class="main-nav">
+  <ul>
+    <li><a href="#">What we do</a></li>
+    <li><a href="#">Energy 101</a></li>
+    <li><a href="#">Industry information</a></li>
+    <li><a href="#">News and events</a></li>
+    <li><a href="#">Publications</a></li>
+    <li><a href="#">Energy outages</a></li>
+    <li><a href="#">Careers</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+</nav>
 
   <main>
     <div class="breadcrumbs">
