@@ -1,8 +1,8 @@
 :root {
-  --primary: #7A3964; /* Header and logo background color, now identical */
+  --primary: #440b2c; /* Header and logo background color, now identical */
   --secondary: #91507a;
   --background: #fff;
-  --footer-bg: #7A3964;
+  --footer-bg: #440b2c;
   --footer-link: #fff;
   --sidebar-bg: #91507a;
   --sidebar-text: #fff;
